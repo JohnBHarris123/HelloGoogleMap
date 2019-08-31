@@ -22,7 +22,14 @@
       // });
 
       // Create a Google Maps native view under the map_canvas div.
-      var map = plugin.google.maps.Map.getMap(div);
+      
+      const MONMOUTH = {"lat": 41.796875, "lng": 140.757007};
+      var map = plugin.google.maps.Map.getMap(div,
+       {'camera': {'latLng': MONMOUTH,
+        'tilt': 30,
+        'zoom': 15,
+        'bearing': 50
+      });
 
       // If you click the button, do something...
       var button = document.getElementById("button");
